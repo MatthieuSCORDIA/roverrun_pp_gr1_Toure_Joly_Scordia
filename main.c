@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "map.h"
 #include "fonction.h"
 
 int main() {
