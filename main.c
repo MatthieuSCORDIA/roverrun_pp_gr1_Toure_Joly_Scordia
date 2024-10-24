@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "map.h"
+//test si pull marche
 
 int main() {
     t_map map = createMapFromFile("..\\maps\\example1.map");
