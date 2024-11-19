@@ -12,6 +12,7 @@ int déplacement(t_move move_a_effectuer,t_localisation *loc_depart, t_map map){
         return 0;
     }
     else{
+
         loc_depart=move(loc_depart, move_a_effectuer);
     }
 }
