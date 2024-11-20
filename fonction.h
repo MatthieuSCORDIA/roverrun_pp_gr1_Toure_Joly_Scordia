@@ -17,11 +17,7 @@ typedef struct s_node{
     int dissofonctionnement;
 }t_node;
 
-typedef struct s_arbre_head{
-    t_node* root;
-};
-
-t_node *createNode(t_move* list_move, int nb_action, t_move move_a_effectuer,t_localisation loc_depart, t_map map);
+t_node *createNode(t_move* list_move_rest, int nb_action, t_move move_effectuer,t_localisation loc_actuel, t_map map, int dissofonctionnement);
 
 
 
