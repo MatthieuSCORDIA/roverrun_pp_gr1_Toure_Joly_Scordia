@@ -14,10 +14,20 @@ typedef struct s_node{
     t_localisation localisation;
     struct s_node **sons;
     int nbSons;
-    int dissofonctionnement;
+    int disfonctionnement;
 }t_node;
 
+typedef struct s_choice{
+    int score_case_finish;
+    t_move* list_move_effectuer;
+    int nbMove;
+    int disfonctionnement;
+}t_choice;
+
 t_node *createNode(t_move* list_move_rest, int nb_action, t_move move_effectuer,t_localisation loc_actuel, t_map map, int dissofonctionnement);
+t_choice* calculate_choice(t_node *root);
+t_move* choice_move(t_node *root);
+
 
 
 
