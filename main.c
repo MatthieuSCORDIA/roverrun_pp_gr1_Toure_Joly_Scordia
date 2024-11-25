@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "fonction.h"
 #include "map.h"
+#include "moves.h"
 
 int main() {
     t_map map = createMapFromFile("..\\maps\\example1.map");

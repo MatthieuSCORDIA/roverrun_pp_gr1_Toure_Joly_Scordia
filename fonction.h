@@ -24,6 +24,7 @@ typedef struct s_choice{
     int disfonctionnement;
 }t_choice;
 
+t_node* create_tree_complet(t_move* list_move_rest, int nb_action, t_move move_effectuer,t_localisation loc_actuel, t_map map, int dissofonctionnement);
 t_node *createNode(t_move* list_move_rest, int nb_action, t_move move_effectuer,t_localisation loc_actuel, t_map map, int dissofonctionnement);
 t_choice* calculate_choice(t_node *root);
 t_move* choice_move(t_node *root);
