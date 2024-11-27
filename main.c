@@ -25,20 +25,25 @@ int main() {
         printf("\n");
     }
     displayMap(map);
-    printf("\noctet node:%llu\n",sizeof(t_node));
-    printf("\noctet int:%llu\n",sizeof(int));
-    printf("\noctet t_move:%llu\n",sizeof(t_move));
-    printf("\noctet t_localisation:%llu\n",sizeof(t_localisation));
 
 
-    t_move list_test[9]={F_10,F_10,F_30,T_RIGHT,T_LEFT};
+    printf("octet node:%llu\n\n",sizeof(t_node));
+
+
+    t_move *list_move = (t_move*)malloc(9*sizeof(t_move));
+    remplir(list_move, 9);
+    printf("listmove terminer:\n");
+    afficherTableau(list_move, 9);
     t_localisation* loc=(t_localisation*)malloc(sizeof(t_localisation));
     loc->pos.x=3;
     loc->pos.y=5;
     loc->ori=NORTH;
-    printf("initialise terminer\n");
-    t_node* tree=create_tree(list_test,5,*loc, map);
-    printf("arbre terminer");
-    //printTree(tree,0);
+    printf("localisation terminer\n");
+    t_node* tree=create_tree(list_move,5,*loc, map);//marche avec peu d'enfant mais pas 9
+    printf("arbre terminer\n");
+    t_move *list_move_choix = (t_move*)malloc(5*sizeof(t_move));
+    list_move_choix =choice_move(tree);
+    printf("choix terminer:\n");
+    afficherTableau(list_move_choix, 5);
     return 0;
 }
